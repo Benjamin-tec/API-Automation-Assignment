@@ -26,7 +26,13 @@
    - **When**: The user submits the login form.
    - **Then**: An error message is returned, indicating invalid credentials.
 
-5. **Logout**
+5. **Delayed Response**
+   - **Scenario**: User experiences a delayed response.
+   - **Given**: The user sent request after a delay of 3 seconds.
+   - **When**: The response should be delayed.
+   - **Then**: Response received after a delay of 3 seconds.
+
+6. **Logout**
    - **Scenario**: Successful user logout.
    - **Given**: A logged-in user.
    - **When**: The user requests to log out.
@@ -51,15 +57,27 @@
    - **Given**: An admin with valid credentials and a user to delete.
    - **When**: The admin requests to delete the user.
    - **Then**: The user is deleted successfully, and a confirmation message is returned.
+  
+4. **Create User (Positive)**
+   - **Scenario**: Admin creates a new user successfully
+   - **Given**: An admin provide valid details to create a new user
+   - **When**: The admin requests to create new user.
+   - **Then**: The user is created successfully, the system should return the new user's details.
 
-4. **Delete User - Negative**
-   - **Scenario**: Admin tries to delete a non-existent user.
-   - **Given**: An admin with valid credentials and a non-existent user ID.
-   - **When**: The admin requests to delete the non-existent user.
-   - **Then**: An error message is returned, indicating the user does not exist.
+5. **List Users - Positive**
+   - **Scenario**: Admin lists all users successfully.
+   - **Given**: An admin with valid credentials.
+   - **When**: The admin requests the list of users.
+   - **Then**: The list of users is returned successfully.
 
-5. **View User Details - Positive**
-   - **Scenario**: Admin views a user's details successfully.
-   - **Given**: An admin with valid credentials and a user to view.
-   - **When**: The admin requests to view the user's details.
+6. **Single User - Positive**
+   - **Scenario**: Admin retrieves a single user successfully.
+   - **Given**: An admin with valid credentials and a valid user ID.
+   - **When**: The admin requests the details of a single user.
    - **Then**: The user's details are returned successfully.
+  
+7. **Single User - Negative**
+   - **Scenario**: Admin tries to retrieve a non-existent user.
+   - **Given**: An admin with valid credentials and a non-existent user ID.
+   - **When**: The admin requests the details of a single user.
+   - **Then**: An error message is returned, indicating the user does not exist.
