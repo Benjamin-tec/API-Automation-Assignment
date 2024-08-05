@@ -19,7 +19,7 @@ Before running the tests, ensure you have the following installed:
     - Download the `ReqRes.postman_environment` file containing the necessary environment variables.
 
 2. **Open Postman**
-    - Launch the Postman application on your computer.
+    - Launch the Postman application on your computer or Postman on the web, access the Postman API Platform through your web browser. Create a free account, and you're in.
 
 3. **Import the Collection**
     - Click on the **Import** button in the top-left corner of Postman.
